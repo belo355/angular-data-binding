@@ -1,0 +1,40 @@
+<!-- <section>
+<article>
+  <h3>Interpolation it's time</h3>
+  <p>Interpolation com apenas uma variavel: {{ url }}</p>
+  <p>Resolvendo expressoes, tipo 1 + 1 = {{ 1 + 1 }}</p>
+  <p>Resolvendo expressoes com func, tipo 1 + 1 n é {{1 + 1 + getValor()}}</p>
+  <p>Apresentando a partir de expressoes bools (cursoAngular e getCursoS) =  {{ cursoAngular && getCurso() }}</p>
+
+  <img src="{{ imgQualquer }}">
+  <p></p>
+  <img [src]="imgQualquer">
+</article>
+
+</section> -->
+
+<section>
+  <h3>class e style binding</h3>
+
+  <div>
+    select your class ==>
+    <select #classe (change)="0">
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Warning</option>
+      <option value="alert-danger">Danger</option>
+    </select>
+    <br><br>
+
+    <div class="alert {{ classe.value }}" role="alert"> texto com interpolacao conforme selecao</div>
+
+    <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">Sucesso</div>
+    <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">Info</div>
+    <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">Warning</div>
+    <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Danger</div>
+
+    <div class="alert alert-danger" role="alert"
+    [style.display]="classe.value == 'alert-danger' ? 'block': 'none'">Texto ira aparecer somente em danger</div>
+
+  </div>
+</section>
