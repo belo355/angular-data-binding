@@ -11,6 +11,17 @@ export class DataBindingComponent implements OnInit {
   cursoAngular: boolean = true;
   valorAtualInput: string = '';
   valorSalvo: string ='';
+  nome: string = 'abc';
+  nameCurso: string = 'Angular2';
+
+  onMudouValor(evento:any){
+    console.log(evento.novoValor);
+  }
+
+  pessoa: any = {
+    name: 'def',
+    idade: 19
+  }
 
   imgQualquer = 'https://picsum.photos/id/237/200/300';
 
@@ -31,7 +42,7 @@ export class DataBindingComponent implements OnInit {
     return alert('Botao clicado');
   }
 
-  onKeyUp(evento:KeyboardEvent): any{
+  onKeyUp(evento:KeyboardEvent): any {
     this.valorAtualInput = (<HTMLInputElement>evento.target).value;
   }
 
